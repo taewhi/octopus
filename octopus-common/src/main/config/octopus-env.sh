@@ -15,7 +15,7 @@
 # The Java implementation to use. (REQUIRED)
 #JAVA_HOME=
 
-# Hadoop prefix. (REQUIRED)
+# Hadoop prefix.
 #HADOOP_PREFIX=
 
 # The maximum amount of heap to use, in MB. 1000 by default.

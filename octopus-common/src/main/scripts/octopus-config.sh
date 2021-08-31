@@ -61,17 +61,17 @@ if [ -n "$OCTOPUS_HEAPSIZE" ]; then
 fi
 
 # check for hadoop in the PATH
-HADOOP=$(which hadoop 2> /dev/null)
+#HADOOP=$(which hadoop 2> /dev/null)
 # HADOOP_PREFIX overrides hadoop in the PATH
-if [ -n "$HADOOP_PREFIX" ]; then
-    HADOOP=$HADOOP_PREFIX/bin/hadoop
-fi
-if [ ! -f "$HADOOP" ]; then
-    echo "Error: Cannot find Hadoop installation: HADOOP_PREFIX must be set or hadoop must be in the PATH" >&2
-    exit 1
-fi
-
-CLASSPATH=$("$HADOOP" classpath 2> /dev/null)
+#if [ -n "$HADOOP_PREFIX" ]; then
+#    HADOOP=$HADOOP_PREFIX/bin/hadoop
+#fi
+#if [ ! -f "$HADOOP" ]; then
+#    echo "Error: Cannot find Hadoop installation: HADOOP_PREFIX must be set or hadoop must be in the PATH" >&2
+#    exit 1
+#fi
+#
+#CLASSPATH=$("$HADOOP" classpath 2> /dev/null)
 
 # OCTOPUS_BASE_CLASSPATH initially contains OCTOPUS_CONF_DIR
 OCTOPUS_BASE_CLASSPATH=$OCTOPUS_CONF_DIR
