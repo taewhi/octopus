@@ -30,9 +30,19 @@ limitations under the License.
     <antlr.version>4.5</antlr.version>
   </properties>
 
+  <repositories>
+    <!-- https://stackoverflow.com/questions/26618192/install-local-jar-dependency-as-part-of-the-lifecycle-before-maven-attempts-to -->
+    <repository>
+      <id>Local repository</id>
+      <url>file://${basedir}/lib</url>
+    </repository>
+  </repositories>
+
   <modules>
     <module>octopus-project</module>
+<!--
     <module>octopus-maven-plugin</module>
+-->
     <module>octopus-common</module>
     <module>octopus-meta</module>
     <module>octopus-testutils</module>
@@ -141,7 +151,7 @@ limitations under the License.
         <plugin>
           <groupId>org.datanucleus</groupId>
           <artifactId>datanucleus-maven-plugin</artifactId>
-          <version>4.0.0-release</version>
+          <version>5.2.0-release</version>
         </plugin>
         <plugin>
           <groupId>org.antlr</groupId>
@@ -151,6 +161,15 @@ limitations under the License.
       </plugins>
     </pluginManagement>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.pentaho</groupId>
+      <artifactId>pentaho-aggdesigner-algorithm</artifactId>
+      <version>5.1.5-jhyde</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
   <licenses>
     <license>
