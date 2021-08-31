@@ -98,6 +98,13 @@ limitations under the License.
       </dependency>
 
       <dependency>
+        <groupId>org.pentaho</groupId>
+        <artifactId>pentaho-aggdesigner-algorithm</artifactId>
+        <version>5.1.5-jhyde</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-common</artifactId>
         <version>${hadoop.version}</version>

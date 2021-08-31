@@ -71,6 +71,12 @@ limitations under the License.
       <artifactId>log4j</artifactId>
     </dependency>
 
+      <dependency>
+        <groupId>org.pentaho</groupId>
+        <artifactId>pentaho-aggdesigner-algorithm</artifactId>
+        <scope>test</scope>
+      </dependency>
+
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>

@@ -31,10 +31,17 @@ limitations under the License.
   </properties>
 
   <repositories>
-    <!-- https://stackoverflow.com/questions/26618192/install-local-jar-dependency-as-part-of-the-lifecycle-before-maven-attempts-to -->
+    <!-- https://stackoverflow.com/questions/26618192/install-local-jar-dependency-as-part-of-the-lifecycle-before-maven-attempts-to 
+
+         Currently, there is no repository for org.pentaho.pentaho-aggdesigner-algorithm.
+         This can be installed from local repository by the following command:
+      $> mvn install:install-file -Dfile=lib/pentaho-aggdesigner-algorithm-5.1.5-jhyde.jar \
+         -DgroupId=org.pentaho -DartifactId=pentaho-aggdesigner-algorithm -Dversion=5.1.5-jhyde \
+         -Dpackaging=jar -DlocalRepositoryPath=lib
+    -->
     <repository>
       <id>Local repository</id>
-      <url>file://${basedir}/lib</url>
+      <url>file://${basedir}/../lib</url>
     </repository>
   </repositories>
 
@@ -161,15 +168,6 @@ limitations under the License.
       </plugins>
     </pluginManagement>
   </build>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-aggdesigner-algorithm</artifactId>
-      <version>5.1.5-jhyde</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 
   <licenses>
     <license>
